@@ -1,0 +1,2 @@
+mae,rmse,band_accuracy,domain_f1,per_domain_f1
+5.0946,9.0951,0.8242,0.8648,"{'IT / Software': 0.8498, 'Non-IT / Management': 0.8311, 'Design / Creative': 0.9593, 'Healthcare': 0.8559, 'Finance / Banking': 0.8454, 'Legal': 0.9048, 'Education': 0.8077}"

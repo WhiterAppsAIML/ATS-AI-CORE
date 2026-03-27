@@ -1,0 +1,45 @@
+# Virtual environment
+ats_venv/
+venv/
+.venv/
+env/
+
+# Raw and processed datasets — never commit
+data/raw/
+data/processed/
+data/labeled/
+data/synthetic/
+
+# Trained model weights
+model/ats_model/
+model/tflite/*.tflite
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+final_venv/
+tfhub_cache/
+*.dll
+*.so

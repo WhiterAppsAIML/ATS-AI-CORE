@@ -1,0 +1,37 @@
+{
+  "_comment": "Feedback rules keyed by domain > score_band > dimension. Expand to 175 rules total (7 domains x 5 bands x 5 dimensions).",
+  "IT / Software": {
+    "Moderate Match": {
+      "skill_alignment": "Add specific programming languages, frameworks, and tools mentioned in the JD (e.g. React, FastAPI, Docker).",
+      "semantic_contextual_fit": "Rewrite your experience bullet points using the same terminology as the JD to improve context alignment.",
+      "keyword_coverage": "Include JD-specific keywords such as CI/CD, microservices, or cloud platforms in your skills section.",
+      "structural_completeness": "Add a dedicated Projects section showcasing relevant technical builds, even if they are academic or personal.",
+      "achievement_impact": "Quantify your impact — replace vague statements with metrics (e.g. 'reduced load time by 40%')."
+    },
+    "Weak Match": {
+      "skill_alignment": "Your skill set has low overlap with the JD. Focus on adding the top 5 missing technical skills, starting with the most frequently mentioned.",
+      "semantic_contextual_fit": "The overall context of your resume does not align with this role. Tailor the summary and experience sections specifically for this JD.",
+      "keyword_coverage": "Many JD keywords are absent from your resume. Run a keyword gap check and incorporate the top missing terms naturally.",
+      "structural_completeness": "Your resume appears to be missing key sections. Ensure Education, Skills, Projects, and a Summary are all present.",
+      "achievement_impact": "Your resume lacks outcome-oriented language. Add action verbs (built, designed, optimized) and measurable results to every bullet point."
+    }
+  },
+  "Non-IT / Management": {
+    "Moderate Match": {
+      "skill_alignment": "Highlight leadership, project management, and cross-functional collaboration skills that match the JD requirements.",
+      "semantic_contextual_fit": "Mirror the language used in the JD when describing your management responsibilities and achievements.",
+      "keyword_coverage": "Include domain-specific management terms from the JD such as P&L, stakeholder management, or agile delivery.",
+      "structural_completeness": "Ensure your resume includes a clear Work Experience section with role titles, company names, and dates.",
+      "achievement_impact": "Add team size, budget managed, or business outcomes to demonstrate leadership impact."
+    }
+  },
+  "Healthcare": {
+    "Moderate Match": {
+      "skill_alignment": "Highlight clinical skills, certifications, and domain knowledge that match the JD requirements.",
+      "keyword_coverage": "Include medical terminology, procedure names, and software tools (e.g. EMR systems) mentioned in the JD.",
+      "structural_completeness": "Ensure your resume lists your license number, certifications, and clinical rotations or placements.",
+      "achievement_impact": "Describe patient outcomes, caseload size, or process improvements to demonstrate clinical impact.",
+      "semantic_contextual_fit": "Align the language of your experience section with the care setting described in the JD."
+    }
+  }
+}

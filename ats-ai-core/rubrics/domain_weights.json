@@ -1,0 +1,52 @@
+{
+  "_comment": "Weights per domain for each of the 5 scoring dimensions. Each row MUST sum to 1.0.",
+  "IT / Software": {
+    "skill_alignment": 0.35,
+    "semantic_contextual_fit": 0.25,
+    "keyword_coverage": 0.2,
+    "structural_completeness": 0.1,
+    "achievement_impact": 0.1
+  },
+  "Non-IT / Management": {
+    "skill_alignment": 0.2,
+    "semantic_contextual_fit": 0.25,
+    "keyword_coverage": 0.2,
+    "structural_completeness": 0.15,
+    "achievement_impact": 0.2
+  },
+  "Design / Creative": {
+    "skill_alignment": 0.3,
+    "semantic_contextual_fit": 0.2,
+    "keyword_coverage": 0.15,
+    "structural_completeness": 0.15,
+    "achievement_impact": 0.2
+  },
+  "Healthcare": {
+    "skill_alignment": 0.25,
+    "semantic_contextual_fit": 0.2,
+    "keyword_coverage": 0.2,
+    "structural_completeness": 0.15,
+    "achievement_impact": 0.2
+  },
+  "Finance / Banking": {
+    "skill_alignment": 0.25,
+    "semantic_contextual_fit": 0.2,
+    "keyword_coverage": 0.2,
+    "structural_completeness": 0.15,
+    "achievement_impact": 0.2
+  },
+  "Legal": {
+    "skill_alignment": 0.2,
+    "semantic_contextual_fit": 0.3,
+    "keyword_coverage": 0.25,
+    "structural_completeness": 0.15,
+    "achievement_impact": 0.1
+  },
+  "Education": {
+    "skill_alignment": 0.2,
+    "semantic_contextual_fit": 0.25,
+    "keyword_coverage": 0.2,
+    "structural_completeness": 0.2,
+    "achievement_impact": 0.15
+  }
+}

@@ -1,0 +1,77 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter/notebook
+.ipynb_checkpoints/
+
+# Logs and temp files (except training logs)
+*.log
+*.tmp
+*.bak
+*.swp
+tmp/
+temp/
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.code-workspace
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# TensorFlow temp files
+**/variables_temp/
+
+# Byte-compiled / optimized / DLL files
+*.so
+
+# Coverage and testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# MyPy cache
+.mypy_cache/
+
+# =============================================================================
+# Large Files Excluded from GitHub (model weights, data, binaries)
+# =============================================================================
+
+# Trained model weights (Keras .h5 files)
+model/ats_model/*.h5
+
+# TFLite compiled models
+model/tflite/*.tflite
+
+# Training logs — KEEP these (un-ignore below)
+model/ats_model/*.csv
+!model/ats_model/training_log.csv
+!model/ats_model/training_log_backup.csv
+
+# Labeled dataset files (large CSVs)
+data/labeled/*.csv
+
+# Evaluation outputs — KEEP eval_report.csv (un-ignore below)
+evaluation/*.csv
+!evaluation/eval_report.csv
+evaluation/plots/*.png
+
+# Keep directory structure with .gitkeep
+!**/.gitkeep

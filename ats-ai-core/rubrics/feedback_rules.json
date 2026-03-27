@@ -1,0 +1,262 @@
+{
+  "_comment": "Feedback rules keyed by domain > score_band > dimension. 7 domains x 5 bands x 5 dimensions = 175 rules.",
+  "IT / Software": {
+    "Excellent Match": {
+      "skill_alignment": {"feedback": "Your technical skills closely match the JD. Ensure listed versions match exactly (e.g. Python 3.11, React 18).", "fresher_variant": "Your project skills closely match the JD. Mention specific versions of tools you used in your projects."},
+      "keyword_coverage": {"feedback": "Strong keyword overlap detected. Double-check that niche tools mentioned in the JD are present on your resume.", "fresher_variant": "Good keyword match. Verify that all tools from your coursework and projects are listed."},
+      "semantic_contextual_fit": {"feedback": "Your experience context is well-aligned. Highlight your most impactful recent contribution.", "fresher_variant": "Your project context aligns well. Highlight the most technically challenging project you completed."},
+      "achievement_impact": {"feedback": "Quantify your top achievements further — aim for 3+ data-backed bullet points.", "fresher_variant": "Add measurable outcomes from academic projects (e.g. accuracy improvements, users served)."},
+      "structural_completeness": {"feedback": "Resume structure is solid. Ensure contact info and LinkedIn URL are current.", "fresher_variant": "Good structure. Add a GitHub or portfolio link to strengthen your profile."}
+    },
+    "Good Match": {
+      "skill_alignment": {"feedback": "Most core skills are present. Add 2-3 missing secondary skills from the JD to improve alignment.", "fresher_variant": "Most core skills match. Add skills from electives or self-study that align with the JD."},
+      "keyword_coverage": {"feedback": "Good keyword coverage. Include specific cloud/DevOps terms if the JD mentions CI/CD or infrastructure.", "fresher_variant": "Good coverage. Add relevant tools from tutorials or certifications you have completed."},
+      "semantic_contextual_fit": {"feedback": "Context is good but could be stronger. Rewrite 1-2 bullet points to mirror JD phrasing.", "fresher_variant": "Align your project descriptions more closely with the language used in the JD."},
+      "achievement_impact": {"feedback": "Add metrics to your remaining bullet points — numbers make achievements concrete.", "fresher_variant": "Quantify project outcomes where possible (e.g. dataset size, model accuracy, time saved)."},
+      "structural_completeness": {"feedback": "Consider adding a brief Summary section if missing to anchor your profile.", "fresher_variant": "Add an Objective or Summary statement tailored to this specific role."}
+    },
+    "Moderate Match": {
+      "skill_alignment": {"feedback": "Add specific programming languages, frameworks, and tools mentioned in the JD (e.g. React, FastAPI, Docker).", "fresher_variant": "List all programming languages and frameworks from your coursework and personal projects that match the JD."},
+      "semantic_contextual_fit": {"feedback": "Rewrite your experience bullet points using the same terminology as the JD to improve context alignment.", "fresher_variant": "Rewrite your project descriptions using terminology from the JD."},
+      "keyword_coverage": {"feedback": "Include JD-specific keywords such as CI/CD, microservices, or cloud platforms in your skills section.", "fresher_variant": "Add relevant technical keywords from the JD to your skills section, even if learned through online courses."},
+      "structural_completeness": {"feedback": "Add a dedicated Projects section showcasing relevant technical builds, even if they are academic or personal.", "fresher_variant": "Add a Projects section with 2-3 relevant builds from coursework, hackathons, or personal work."},
+      "achievement_impact": {"feedback": "Quantify your impact — replace vague statements with metrics (e.g. 'reduced load time by 40%').", "fresher_variant": "Add concrete outcomes to project descriptions (e.g. 'achieved 92% accuracy on test set')."}
+    },
+    "Weak Match": {
+      "skill_alignment": {"feedback": "Your skill set has low overlap with the JD. Focus on adding the top 5 missing technical skills.", "fresher_variant": "Focus on learning and listing the top 3 required technologies through online courses or projects."},
+      "semantic_contextual_fit": {"feedback": "The overall context of your resume does not align with this role. Tailor the summary and experience sections.", "fresher_variant": "Rewrite your resume objective and project descriptions to specifically target this role."},
+      "keyword_coverage": {"feedback": "Many JD keywords are absent from your resume. Run a keyword gap check and incorporate the top missing terms.", "fresher_variant": "Identify the top 5 missing keywords from the JD and build small projects using those technologies."},
+      "structural_completeness": {"feedback": "Your resume appears to be missing key sections. Ensure Education, Skills, Projects, and a Summary are all present.", "fresher_variant": "Ensure your resume has clear Education, Skills, Projects, and Certifications sections."},
+      "achievement_impact": {"feedback": "Your resume lacks outcome-oriented language. Add action verbs and measurable results to every bullet point.", "fresher_variant": "Use action verbs (built, designed, implemented) and add measurable results to project descriptions."}
+    },
+    "Poor Match": {
+      "skill_alignment": {"feedback": "Very low skill overlap. This role requires a significantly different technical stack than what you currently have.", "fresher_variant": "This role requires skills you haven't demonstrated yet. Consider building foundational projects first."},
+      "keyword_coverage": {"feedback": "Most required technologies are absent from your resume. Consider upskilling before applying.", "fresher_variant": "Start with online courses or tutorials in the key technologies listed in this JD."},
+      "semantic_contextual_fit": {"feedback": "Your background appears to be in a different technical domain. Consider roles closer to your experience.", "fresher_variant": "Your academic background may not align with this role. Look for entry-level positions in your domain."},
+      "achievement_impact": {"feedback": "Without relevant achievements, it will be difficult to stand out. Build portfolio projects in the target domain.", "fresher_variant": "Build 2-3 portfolio projects using the technologies in this JD before applying."},
+      "structural_completeness": {"feedback": "Major resume sections are missing. Create a complete resume with all standard sections before applying.", "fresher_variant": "Create a complete resume with Summary, Education, Skills, Projects, and Certifications sections."}
+    }
+  },
+  "Non-IT / Management": {
+    "Excellent Match": {
+      "skill_alignment": {"feedback": "Strong management skill alignment. Emphasize leadership scope (team size, budget) for maximum impact.", "fresher_variant": "Your leadership experience from college activities aligns well. Quantify team sizes you led."},
+      "keyword_coverage": {"feedback": "Good keyword match. Verify niche management terms from the JD are included.", "fresher_variant": "Ensure event management and coordination terms from the JD appear in your resume."},
+      "semantic_contextual_fit": {"feedback": "Your experience description closely mirrors the JD. Keep refining for maximum relevance.", "fresher_variant": "Your extracurricular leadership roles align with this JD. Keep descriptions specific."},
+      "achievement_impact": {"feedback": "Add revenue, cost-saving, or efficiency metrics to your top 3 achievements.", "fresher_variant": "Quantify your leadership outcomes (e.g. events organized, participants managed, funds raised)."},
+      "structural_completeness": {"feedback": "Resume structure is comprehensive. Ensure certifications (PMP, Six Sigma) are prominently listed.", "fresher_variant": "Structure looks good. List relevant certifications or coursework prominently."}
+    },
+    "Good Match": {
+      "skill_alignment": {"feedback": "Core management skills present. Add strategic planning or change management if mentioned in the JD.", "fresher_variant": "Core skills match. Add any leadership training or management coursework to strengthen."},
+      "keyword_coverage": {"feedback": "Add industry-specific management terms from the JD such as P&L, KPIs, or stakeholder management.", "fresher_variant": "Include management terminology from the JD in your project and activity descriptions."},
+      "semantic_contextual_fit": {"feedback": "Mirror the language used in the JD when describing your management responsibilities.", "fresher_variant": "Use the same language as the JD when describing your organizational and leadership activities."},
+      "achievement_impact": {"feedback": "Add team size, budget managed, or business outcomes to demonstrate leadership impact.", "fresher_variant": "Quantify your contributions: events planned, team members coordinated, budgets handled."},
+      "structural_completeness": {"feedback": "Ensure your resume includes a clear Work Experience section with role titles, company names, and dates.", "fresher_variant": "Structure your resume with clear sections for Education, Activities, Skills, and Internships."}
+    },
+    "Moderate Match": {
+      "skill_alignment": {"feedback": "Highlight leadership, project management, and cross-functional collaboration skills that match the JD.", "fresher_variant": "Highlight any team lead roles, event coordination, or group project management experience."},
+      "semantic_contextual_fit": {"feedback": "Mirror the language used in the JD when describing your management responsibilities and achievements.", "fresher_variant": "Use JD terminology when describing your college leadership and organizational roles."},
+      "keyword_coverage": {"feedback": "Include domain-specific management terms from the JD such as P&L, stakeholder management, or agile delivery.", "fresher_variant": "Add management-related keywords from the JD to your skills and activity descriptions."},
+      "structural_completeness": {"feedback": "Ensure your resume includes a clear Work Experience section with role titles, company names, and dates.", "fresher_variant": "Add clearly labeled sections for Internships, Leadership Roles, and Skills."},
+      "achievement_impact": {"feedback": "Add team size, budget managed, or business outcomes to demonstrate leadership impact.", "fresher_variant": "Describe the scale of your leadership roles (team size, event attendance, budget managed)."}
+    },
+    "Weak Match": {
+      "skill_alignment": {"feedback": "Core management skills are underrepresented. Add specific leadership and planning competencies.", "fresher_variant": "Build management skills through student organizations, volunteer work, or online certifications."},
+      "keyword_coverage": {"feedback": "Many management terms from the JD are missing. Add relevant process and strategy keywords.", "fresher_variant": "Learn and add key management terms mentioned in the JD through coursework or reading."},
+      "semantic_contextual_fit": {"feedback": "Your resume context is not well-aligned with this management role. Rewrite with the JD as a guide.", "fresher_variant": "Reframe your experiences to emphasize any organizational or leadership aspects."},
+      "achievement_impact": {"feedback": "Add concrete business outcomes and leadership metrics to your experience entries.", "fresher_variant": "Describe measurable outcomes from any leadership or coordination activities."},
+      "structural_completeness": {"feedback": "Add a Summary section that positions you as a management professional.", "fresher_variant": "Add an Objective section stating your interest in management and relevant preparation."}
+    },
+    "Poor Match": {
+      "skill_alignment": {"feedback": "Your profile does not demonstrate management competencies required for this role.", "fresher_variant": "This role requires management skills not yet demonstrated. Seek internships or student leadership roles."},
+      "keyword_coverage": {"feedback": "Critical management and business terms are absent. This role may not be the right fit currently.", "fresher_variant": "Start building your management vocabulary through business courses or organizational involvement."},
+      "semantic_contextual_fit": {"feedback": "Your background is in a different functional area. Consider roles that better leverage your experience.", "fresher_variant": "Your academic focus may not align with this management role. Consider related entry-level positions."},
+      "achievement_impact": {"feedback": "No leadership achievements demonstrated. Build management experience before targeting this role level.", "fresher_variant": "Gain leadership experience through clubs, volunteering, or internships before applying."},
+      "structural_completeness": {"feedback": "Resume needs significant restructuring for a management-track application.", "fresher_variant": "Restructure your resume to highlight any leadership, coordination, or business coursework."}
+    }
+  },
+  "Design / Creative": {
+    "Excellent Match": {
+      "skill_alignment": {"feedback": "Design tool proficiency is strong. Ensure portfolio links are included and accessible.", "fresher_variant": "Great tool match. Add links to your portfolio or Behance/Dribbble profiles."},
+      "keyword_coverage": {"feedback": "Keywords match well. Verify specific design methodology terms from the JD are present.", "fresher_variant": "Good keyword coverage. Include any design thinking or UX methodology coursework."},
+      "semantic_contextual_fit": {"feedback": "Your design experience context is well-aligned. Emphasize your most visually impactful project.", "fresher_variant": "Your project context aligns well. Highlight your strongest portfolio piece."},
+      "achievement_impact": {"feedback": "Add user engagement metrics or client satisfaction data to your design achievements.", "fresher_variant": "Add context to your projects: audience reached, positive feedback received, or awards won."},
+      "structural_completeness": {"feedback": "Include a Portfolio section with direct links to your best 3-5 projects.", "fresher_variant": "Add a Portfolio section linking to your top academic or personal design projects."}
+    },
+    "Good Match": {
+      "skill_alignment": {"feedback": "Core design skills present. Add missing tools like Figma, Sketch, or Adobe XD if mentioned in JD.", "fresher_variant": "Add any design tools you have learned through courses or personal exploration."},
+      "keyword_coverage": {"feedback": "Add specific design terms from the JD (wireframing, prototyping, design systems).", "fresher_variant": "Include design process terms like wireframing or user research from your coursework."},
+      "semantic_contextual_fit": {"feedback": "Align your project descriptions with the design focus of the JD (UI/UX, branding, etc.).", "fresher_variant": "Describe your design projects using the same terminology as the JD."},
+      "achievement_impact": {"feedback": "Quantify your design impact: conversion improvements, user satisfaction scores, or redesign outcomes.", "fresher_variant": "Describe outcomes of your design projects (e.g. usability test results, professor feedback)."},
+      "structural_completeness": {"feedback": "Add a link to your portfolio or attach a case study demonstrating your design process.", "fresher_variant": "Create a simple portfolio with 3-5 projects and link it on your resume."}
+    },
+    "Moderate Match": {
+      "skill_alignment": {"feedback": "Add specific design tools and methodologies mentioned in the JD to your skills section.", "fresher_variant": "List all design tools from coursework and personal projects that match the JD."},
+      "keyword_coverage": {"feedback": "Include design-specific terms from the JD such as user research, information architecture, or visual design.", "fresher_variant": "Add design terminology from the JD to your project descriptions."},
+      "semantic_contextual_fit": {"feedback": "Rewrite your experience to focus on the design discipline specified in the JD.", "fresher_variant": "Reframe your project descriptions to match the design focus of this role."},
+      "achievement_impact": {"feedback": "Add metrics or client feedback to demonstrate the impact of your design work.", "fresher_variant": "Describe the purpose and outcome of each design project clearly."},
+      "structural_completeness": {"feedback": "Add a Portfolio section and ensure your resume demonstrates both creative and technical skills.", "fresher_variant": "Add a Portfolio or Projects section showcasing your best design work."}
+    },
+    "Weak Match": {
+      "skill_alignment": {"feedback": "Your design tool proficiency does not match the JD. Focus on learning the required tools.", "fresher_variant": "Learn the design tools mentioned in the JD through tutorials or courses."},
+      "keyword_coverage": {"feedback": "Most design-specific terms are missing from your resume.", "fresher_variant": "Study the JD terminology and build small projects using those design methods."},
+      "semantic_contextual_fit": {"feedback": "Your experience is not in the design domain described in the JD. Significant tailoring needed.", "fresher_variant": "Rewrite your resume to emphasize any creative or visual work you have done."},
+      "achievement_impact": {"feedback": "No design-specific achievements are visible. Build a portfolio before applying.", "fresher_variant": "Create design projects to build a portfolio before targeting this type of role."},
+      "structural_completeness": {"feedback": "Add Portfolio, Skills, and Design Process sections to your resume.", "fresher_variant": "Restructure your resume to include design-focused sections and a portfolio link."}
+    },
+    "Poor Match": {
+      "skill_alignment": {"feedback": "Your skill set is in a different domain. This design role requires specialized creative skills.", "fresher_variant": "This role requires design skills you haven't demonstrated. Start with foundational design courses."},
+      "keyword_coverage": {"feedback": "Critical design tools and concepts are absent from your resume.", "fresher_variant": "Begin learning core design tools (Figma, Adobe Suite) before applying to design roles."},
+      "semantic_contextual_fit": {"feedback": "Your resume context does not align with this creative role at all.", "fresher_variant": "Your academic background is in a different field. Consider bridging courses or bootcamps."},
+      "achievement_impact": {"feedback": "No creative achievements to demonstrate. Build a design portfolio first.", "fresher_variant": "Start building a portfolio with personal design projects or course assignments."},
+      "structural_completeness": {"feedback": "Resume structure does not reflect a design professional's profile.", "fresher_variant": "Redesign your resume to showcase creative skills, tools, and a portfolio link."}
+    }
+  },
+  "Healthcare": {
+    "Excellent Match": {
+      "skill_alignment": {"feedback": "Clinical skills are well-aligned. Ensure all active certifications and license numbers are listed.", "fresher_variant": "Your clinical training aligns well. List all certifications, BLS/ACLS, and clinical rotations."},
+      "keyword_coverage": {"feedback": "Good medical terminology coverage. Verify specialty-specific terms from the JD are included.", "fresher_variant": "Good coverage. Add any medical software or equipment you trained on."},
+      "semantic_contextual_fit": {"feedback": "Your clinical experience context matches the JD well. Highlight the most relevant care setting.", "fresher_variant": "Your clinical rotation context aligns. Highlight the most relevant placement."},
+      "achievement_impact": {"feedback": "Add patient outcome metrics, caseload numbers, or quality improvement results.", "fresher_variant": "Describe patient interactions, procedures observed, and skills practiced during rotations."},
+      "structural_completeness": {"feedback": "Ensure license number, certifications, and CME/CEU credits are prominently displayed.", "fresher_variant": "List your degree, certifications, license status, and all clinical rotations clearly."}
+    },
+    "Good Match": {
+      "skill_alignment": {"feedback": "Core clinical skills present. Add specialty certifications if mentioned in the JD.", "fresher_variant": "Core skills match. Add any additional certifications or training workshops attended."},
+      "keyword_coverage": {"feedback": "Add specific clinical terms, procedure names, and EMR systems from the JD.", "fresher_variant": "Include EMR systems, clinical procedures, and equipment from your training."},
+      "semantic_contextual_fit": {"feedback": "Align your experience descriptions with the care setting described in the JD.", "fresher_variant": "Describe your clinical rotations using the same terminology as the JD."},
+      "achievement_impact": {"feedback": "Add patient caseload, quality metrics, or process improvement outcomes.", "fresher_variant": "Describe specific patient care activities and their outcomes from your clinical training."},
+      "structural_completeness": {"feedback": "Ensure certifications section is complete with expiry dates and issuing bodies.", "fresher_variant": "Add a Certifications section with all current credentials and their status."}
+    },
+    "Moderate Match": {
+      "skill_alignment": {"feedback": "Highlight clinical skills, certifications, and domain knowledge that match the JD requirements.", "fresher_variant": "List all clinical skills, certifications, and coursework relevant to this healthcare role."},
+      "keyword_coverage": {"feedback": "Include medical terminology, procedure names, and software tools (e.g. EMR systems) mentioned in the JD.", "fresher_variant": "Add medical terms, equipment names, and any healthcare software from your training."},
+      "structural_completeness": {"feedback": "Ensure your resume lists your license number, certifications, and clinical rotations or placements.", "fresher_variant": "Add clear sections for Education, Clinical Rotations, Certifications, and Skills."},
+      "achievement_impact": {"feedback": "Describe patient outcomes, caseload size, or process improvements to demonstrate clinical impact.", "fresher_variant": "Describe hands-on experiences from clinical rotations with specific details."},
+      "semantic_contextual_fit": {"feedback": "Align the language of your experience section with the care setting described in the JD.", "fresher_variant": "Use clinical language from the JD when describing your rotation experiences."}
+    },
+    "Weak Match": {
+      "skill_alignment": {"feedback": "Clinical skill overlap is low. Add relevant certifications and hands-on clinical skills.", "fresher_variant": "Focus on gaining clinical experience through rotations, volunteering, or certifications."},
+      "keyword_coverage": {"feedback": "Most clinical terms from the JD are missing from your resume.", "fresher_variant": "Study the JD requirements and add any matching coursework or training."},
+      "semantic_contextual_fit": {"feedback": "Your experience context does not match the clinical setting described in the JD.", "fresher_variant": "Reframe your experiences to highlight any patient care or clinical exposure."},
+      "achievement_impact": {"feedback": "No clinical outcome metrics visible. Add patient-facing achievements.", "fresher_variant": "Describe any patient interactions or clinical procedures from your training."},
+      "structural_completeness": {"feedback": "Add Certifications, Clinical Experience, and Licensure sections.", "fresher_variant": "Add sections for Clinical Training, Certifications, and Healthcare Skills."}
+    },
+    "Poor Match": {
+      "skill_alignment": {"feedback": "Your background is not in healthcare. This role requires clinical training and credentials.", "fresher_variant": "This role requires clinical qualifications you don't currently have."},
+      "keyword_coverage": {"feedback": "Healthcare-specific terminology is entirely absent from your resume.", "fresher_variant": "This role requires medical knowledge and terminology not present in your resume."},
+      "semantic_contextual_fit": {"feedback": "Your experience is in a non-clinical domain. This healthcare role is not a good fit currently.", "fresher_variant": "Your academic background is not in healthcare. Consider prerequisite courses first."},
+      "achievement_impact": {"feedback": "No healthcare achievements demonstrated. Clinical experience is required for this role.", "fresher_variant": "Gain foundational healthcare knowledge and certifications before applying."},
+      "structural_completeness": {"feedback": "Resume does not reflect a healthcare professional profile.", "fresher_variant": "A healthcare resume requires Licensure, Certifications, and Clinical Experience sections."}
+    }
+  },
+  "Finance / Banking": {
+    "Excellent Match": {
+      "skill_alignment": {"feedback": "Strong finance skill alignment. Highlight CFA/CPA status and relevant software tools.", "fresher_variant": "Great alignment. List all finance certifications, coursework, and tools you are proficient in."},
+      "keyword_coverage": {"feedback": "Good coverage. Ensure niche financial terms from the JD are present.", "fresher_variant": "Verify all financial terms from the JD appear in your skills or coursework sections."},
+      "semantic_contextual_fit": {"feedback": "Your financial experience context matches well. Highlight the most relevant engagement.", "fresher_variant": "Your coursework and projects align. Highlight the most relevant financial analysis work."},
+      "achievement_impact": {"feedback": "Add portfolio size, deal values, or cost savings to quantify financial impact.", "fresher_variant": "Quantify your academic projects (e.g. portfolio simulated, analysis scope, data volume)."},
+      "structural_completeness": {"feedback": "Ensure professional certifications (CPA, CFA, FRM) are listed with completion dates.", "fresher_variant": "List all relevant coursework, certifications in progress, and finance tools."}
+    },
+    "Good Match": {
+      "skill_alignment": {"feedback": "Core finance skills present. Add analytical tools or methodologies mentioned in the JD.", "fresher_variant": "Core skills match. Add financial modeling tools or methodologies from your coursework."},
+      "keyword_coverage": {"feedback": "Add specific financial terms from the JD (DCF, risk modeling, compliance, derivatives).", "fresher_variant": "Include financial concepts from your coursework that match the JD requirements."},
+      "semantic_contextual_fit": {"feedback": "Align your experience descriptions with the financial services context of the JD.", "fresher_variant": "Describe your finance projects using the terminology from the JD."},
+      "achievement_impact": {"feedback": "Add financial metrics to your achievements (AUM, cost reduction, risk mitigation).", "fresher_variant": "Quantify your academic financial projects with specific data and outcomes."},
+      "structural_completeness": {"feedback": "Add a Certifications section for any finance credentials (CFA, FRM, CPA).", "fresher_variant": "Add sections for Finance Coursework, Certifications, and Analytical Tools."}
+    },
+    "Moderate Match": {
+      "skill_alignment": {"feedback": "Add financial analysis tools, regulatory knowledge, and quantitative skills from the JD.", "fresher_variant": "List financial tools and concepts from your coursework that match the JD."},
+      "keyword_coverage": {"feedback": "Include finance-specific keywords from the JD such as financial modeling, compliance, or valuation.", "fresher_variant": "Add financial terms from the JD to your skills and project descriptions."},
+      "semantic_contextual_fit": {"feedback": "Rewrite your experience to emphasize financial analysis and business context.", "fresher_variant": "Describe your academic projects using finance industry language from the JD."},
+      "achievement_impact": {"feedback": "Add financial metrics and business impact numbers to your experience entries.", "fresher_variant": "Describe the scope and outcomes of your finance coursework projects."},
+      "structural_completeness": {"feedback": "Ensure your resume includes Finance Skills, Certifications, and relevant Experience sections.", "fresher_variant": "Add clear sections for Finance Coursework, Tools, and any relevant internships."}
+    },
+    "Weak Match": {
+      "skill_alignment": {"feedback": "Financial skill overlap is low. Add core finance competencies and tools.", "fresher_variant": "Focus on building finance skills through coursework, certifications, or online learning."},
+      "keyword_coverage": {"feedback": "Most financial terms from the JD are missing. Significant knowledge gaps exist.", "fresher_variant": "Study the JD requirements and build your financial vocabulary and tool proficiency."},
+      "semantic_contextual_fit": {"feedback": "Your experience context is not in the financial domain described in the JD.", "fresher_variant": "Reframe your experiences to highlight any analytical or quantitative aspects."},
+      "achievement_impact": {"feedback": "No financial achievements visible. Add relevant metrics or analytical outcomes.", "fresher_variant": "Complete finance projects or case studies to demonstrate analytical capability."},
+      "structural_completeness": {"feedback": "Add Finance Experience, Certifications, and Analytical Skills sections.", "fresher_variant": "Create dedicated sections for Finance Coursework, Skills, and Certifications."}
+    },
+    "Poor Match": {
+      "skill_alignment": {"feedback": "Your profile lacks finance and analytical skills required for this role.", "fresher_variant": "This role requires finance skills you haven't developed yet."},
+      "keyword_coverage": {"feedback": "Financial terminology is absent. This role requires domain-specific expertise.", "fresher_variant": "Start with foundational finance courses before applying to this type of role."},
+      "semantic_contextual_fit": {"feedback": "Your background is in a different domain. Consider roles closer to your expertise.", "fresher_variant": "Your academic focus is not in finance. Consider bridging courses or a finance minor."},
+      "achievement_impact": {"feedback": "No finance-related achievements demonstrated. Build domain expertise first.", "fresher_variant": "Gain exposure through finance clubs, case competitions, or online courses."},
+      "structural_completeness": {"feedback": "Resume does not reflect a finance professional profile.", "fresher_variant": "Restructure your resume to include any quantitative, analytical, or business coursework."}
+    }
+  },
+  "Legal": {
+    "Excellent Match": {
+      "skill_alignment": {"feedback": "Strong legal skill alignment. Ensure bar admission and practice areas are clearly stated.", "fresher_variant": "Your legal education aligns well. List moot court, clinic experience, and relevant coursework."},
+      "keyword_coverage": {"feedback": "Good terminology match. Verify specific legal practice terms from the JD are included.", "fresher_variant": "Ensure all legal terms from the JD appear in your coursework and activities sections."},
+      "semantic_contextual_fit": {"feedback": "Your legal experience matches the JD context. Highlight your most relevant case or matter.", "fresher_variant": "Your legal coursework aligns. Highlight the most relevant clinic or moot court experience."},
+      "achievement_impact": {"feedback": "Add case outcomes, client portfolio size, or notable matters handled.", "fresher_variant": "Describe moot court results, clinic cases handled, or legal research published."},
+      "structural_completeness": {"feedback": "Ensure Bar Admission, Practice Areas, and Publications sections are complete.", "fresher_variant": "List your degree, relevant coursework, clinic hours, and any published legal writing."}
+    },
+    "Good Match": {
+      "skill_alignment": {"feedback": "Core legal competencies present. Add practice area specializations from the JD.", "fresher_variant": "Core skills match. Add specific legal courses and clinic experiences relevant to the JD."},
+      "keyword_coverage": {"feedback": "Add specific legal terms from the JD (e.g. litigation, compliance, due diligence, contract drafting).", "fresher_variant": "Include legal terminology from your coursework that matches the JD requirements."},
+      "semantic_contextual_fit": {"feedback": "Align your experience descriptions with the practice area described in the JD.", "fresher_variant": "Describe your clinic and coursework using the practice area terminology from the JD."},
+      "achievement_impact": {"feedback": "Add matter descriptions with outcomes, client type, and complexity indicators.", "fresher_variant": "Describe your clinic cases, legal research, and academic achievements with specifics."},
+      "structural_completeness": {"feedback": "Add a Practice Areas or Legal Specializations section.", "fresher_variant": "Add sections for Legal Coursework, Clinic Experience, and Moot Court."}
+    },
+    "Moderate Match": {
+      "skill_alignment": {"feedback": "Highlight legal research, writing, and practice area skills that match the JD.", "fresher_variant": "List all law courses, legal skills, and clinic experience relevant to this role."},
+      "keyword_coverage": {"feedback": "Include legal terminology from the JD such as regulatory compliance, case management, or contract review.", "fresher_variant": "Add legal terms from the JD to your skills and coursework descriptions."},
+      "semantic_contextual_fit": {"feedback": "Rewrite your experience to emphasize legal analysis and the practice area context.", "fresher_variant": "Describe your academic legal work using terminology from the JD."},
+      "achievement_impact": {"feedback": "Add case complexity, research contributions, or client service metrics.", "fresher_variant": "Describe your contributions to clinic cases, research projects, or legal publications."},
+      "structural_completeness": {"feedback": "Ensure your resume includes Bar Status, Education, Legal Experience, and Skills sections.", "fresher_variant": "Add clear sections for Legal Education, Clinic Experience, Skills, and Activities."}
+    },
+    "Weak Match": {
+      "skill_alignment": {"feedback": "Legal skill overlap is low. Add core legal research and practice competencies.", "fresher_variant": "Focus on gaining legal skills through additional coursework, clinics, or internships."},
+      "keyword_coverage": {"feedback": "Most legal terms from the JD are missing from your resume.", "fresher_variant": "Study the JD and add matching legal terminology from your coursework."},
+      "semantic_contextual_fit": {"feedback": "Your experience context does not align with this legal practice area.", "fresher_variant": "Highlight any legal coursework, debate, or analytical experience you have."},
+      "achievement_impact": {"feedback": "No legal achievements visible. Add relevant case work or research contributions.", "fresher_variant": "Participate in moot court, legal clinics, or research to build legal achievements."},
+      "structural_completeness": {"feedback": "Add Legal Education, Bar Status, and Practice Experience sections.", "fresher_variant": "Structure your resume with Legal Education, Coursework, and Skills sections."}
+    },
+    "Poor Match": {
+      "skill_alignment": {"feedback": "Your profile does not demonstrate legal training or practice competencies.", "fresher_variant": "This role requires legal qualifications you don't currently possess."},
+      "keyword_coverage": {"feedback": "Legal terminology is entirely absent. This role requires a law degree or equivalent.", "fresher_variant": "This role requires legal education and knowledge not present in your background."},
+      "semantic_contextual_fit": {"feedback": "Your background is not in law. This legal role requires domain-specific training.", "fresher_variant": "Your academic background is not in law. A law degree is typically required."},
+      "achievement_impact": {"feedback": "No legal experience to evaluate. Professional legal qualifications are needed.", "fresher_variant": "Legal roles require specific education and training not yet demonstrated."},
+      "structural_completeness": {"feedback": "Resume does not reflect a legal professional profile.", "fresher_variant": "A legal resume requires education, bar status, and practice area sections."}
+    }
+  },
+  "Education": {
+    "Excellent Match": {
+      "skill_alignment": {"feedback": "Teaching skills are well-aligned. Ensure subject specialization and grade levels are clearly stated.", "fresher_variant": "Your education background aligns. List teaching practicum, tutoring, and subject expertise."},
+      "keyword_coverage": {"feedback": "Good pedagogical keyword coverage. Verify curriculum and assessment terms from the JD are present.", "fresher_variant": "Ensure educational terms from the JD appear in your practicum and coursework sections."},
+      "semantic_contextual_fit": {"feedback": "Your teaching experience context matches the JD. Highlight your most impactful classroom outcome.", "fresher_variant": "Your student teaching experience aligns. Highlight your best practicum placement."},
+      "achievement_impact": {"feedback": "Add student outcome metrics, curriculum achievements, or program development results.", "fresher_variant": "Describe student outcomes from your practicum (e.g. test score improvements, engaged students)."},
+      "structural_completeness": {"feedback": "Ensure teaching certifications, subject areas, and grade level experience are prominently listed.", "fresher_variant": "List your degree, teaching certifications, practicum hours, and subject specializations."}
+    },
+    "Good Match": {
+      "skill_alignment": {"feedback": "Core teaching skills present. Add curriculum development or EdTech skills if mentioned in JD.", "fresher_variant": "Core teaching skills match. Add educational technology or curriculum coursework."},
+      "keyword_coverage": {"feedback": "Add specific educational terms from the JD (differentiated instruction, assessment, IEP).", "fresher_variant": "Include educational methodology terms from your coursework that match the JD."},
+      "semantic_contextual_fit": {"feedback": "Align your experience with the educational setting described in the JD (K-12, higher ed, etc.).", "fresher_variant": "Describe your practicum using the language and context of the JD."},
+      "achievement_impact": {"feedback": "Add student achievement data, class size, or program outcomes to your experience.", "fresher_variant": "Describe your teaching outcomes with specifics from your practicum placements."},
+      "structural_completeness": {"feedback": "Add a Teaching Certifications section with current credential status.", "fresher_variant": "Add sections for Education Coursework, Practicum, Certifications, and Skills."}
+    },
+    "Moderate Match": {
+      "skill_alignment": {"feedback": "Add specific pedagogical skills, classroom management techniques, and subject expertise from the JD.", "fresher_variant": "List all teaching methods, educational tools, and subject areas from your coursework."},
+      "keyword_coverage": {"feedback": "Include education-specific terms from the JD such as lesson planning, differentiation, or student assessment.", "fresher_variant": "Add educational terms from the JD to your coursework and experience descriptions."},
+      "semantic_contextual_fit": {"feedback": "Rewrite your experience to emphasize teaching methodology and classroom context.", "fresher_variant": "Describe your practicum and tutoring experiences using the JD's educational language."},
+      "achievement_impact": {"feedback": "Add measurable teaching outcomes: student progress, completion rates, or curriculum improvements.", "fresher_variant": "Describe specific teaching activities and their impact on student learning."},
+      "structural_completeness": {"feedback": "Ensure your resume includes Teaching Experience, Certifications, and Subject Areas sections.", "fresher_variant": "Add clear sections for Education, Practicum, Teaching Skills, and Certifications."}
+    },
+    "Weak Match": {
+      "skill_alignment": {"feedback": "Teaching skill overlap is low. Add pedagogical competencies and relevant certifications.", "fresher_variant": "Focus on building teaching skills through practicum, tutoring, or substitute teaching."},
+      "keyword_coverage": {"feedback": "Most educational terms from the JD are missing from your resume.", "fresher_variant": "Study the JD and add matching educational terminology from your training."},
+      "semantic_contextual_fit": {"feedback": "Your experience context does not match the educational setting described in the JD.", "fresher_variant": "Highlight any tutoring, mentoring, or training experience to show teaching potential."},
+      "achievement_impact": {"feedback": "No teaching achievements visible. Add classroom outcomes or student engagement metrics.", "fresher_variant": "Gain teaching experience through tutoring, volunteering, or teaching assistant roles."},
+      "structural_completeness": {"feedback": "Add Teaching Experience, Certifications, and Subject Expertise sections.", "fresher_variant": "Structure your resume with Education, Teaching Experience, and Certification sections."}
+    },
+    "Poor Match": {
+      "skill_alignment": {"feedback": "Your profile lacks teaching qualifications and pedagogical skills.", "fresher_variant": "This role requires teaching skills and certifications you haven't demonstrated."},
+      "keyword_coverage": {"feedback": "Educational terminology is absent. This role requires domain-specific training.", "fresher_variant": "This role requires educational training not present in your background."},
+      "semantic_contextual_fit": {"feedback": "Your background is not in education. Consider alternative career paths or teaching certification programs.", "fresher_variant": "Your academic focus is not in education. Consider a teaching certification program."},
+      "achievement_impact": {"feedback": "No educational achievements demonstrated. Teaching experience is required.", "fresher_variant": "Gain teaching exposure through tutoring or volunteer education programs first."},
+      "structural_completeness": {"feedback": "Resume does not reflect an education professional profile.", "fresher_variant": "An education resume requires Teaching Experience, Certifications, and Subject Area sections."}
+    }
+  }
+}
