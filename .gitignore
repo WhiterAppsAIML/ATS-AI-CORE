@@ -41,6 +41,7 @@ build/
 # Editors
 .vscode/
 .idea/
+.claude/
 *.swp
 
 # OS
