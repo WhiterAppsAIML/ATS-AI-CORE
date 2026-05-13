@@ -1,0 +1,159 @@
+{
+  "ats": {
+    "csv_path": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\data\\labeled\\merged_final.csv",
+    "total_rows": 8936,
+    "rows_after_dropna": 8936,
+    "dropped_nan": 0,
+    "score_range_raw": [
+      0.0,
+      95.30000305175781
+    ],
+    "score_range_norm": [
+      0.0,
+      0.953000009059906
+    ],
+    "domain_range": [
+      0,
+      6
+    ],
+    "domain_distribution": {
+      "0": 1166,
+      "1": 2652,
+      "2": 636,
+      "3": 1064,
+      "4": 1567,
+      "5": 896,
+      "6": 955
+    },
+    "resume_seq_stats": {
+      "mean": 127.7,
+      "p50": 128,
+      "p95": 128,
+      "p99": 128,
+      "min": 10,
+      "max": 128
+    },
+    "jd_seq_stats": {
+      "mean": 127.5,
+      "p50": 128,
+      "p95": 128,
+      "p99": 128,
+      "min": 22,
+      "max": 128
+    },
+    "npz_path": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\data\\tokenized\\ats_tokenized.npz",
+    "npz_size_mb": 2.89,
+    "arrays": {
+      "resume_input_ids": [
+        8936,
+        128
+      ],
+      "resume_attention_mask": [
+        8936,
+        128
+      ],
+      "jd_input_ids": [
+        8936,
+        128
+      ],
+      "jd_attention_mask": [
+        8936,
+        128
+      ],
+      "ats_scores": [
+        8936
+      ],
+      "domain_labels": [
+        8936
+      ]
+    }
+  },
+  "rsg": {
+    "csv_path": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\data\\labeled\\rsg_data.csv",
+    "total_rows": 1950,
+    "rows_after_filter": 1950,
+    "dropped_or_filtered": 0,
+    "needs_mapping": true,
+    "label_range": [
+      0,
+      45
+    ],
+    "num_unique_labels": 46,
+    "label_distribution": {
+      "0": 9,
+      "1": 29,
+      "2": 10,
+      "3": 9,
+      "4": 28,
+      "5": 16,
+      "6": 52,
+      "7": 67,
+      "8": 23,
+      "9": 67,
+      "10": 17,
+      "11": 25,
+      "12": 22,
+      "13": 18,
+      "14": 22,
+      "15": 63,
+      "16": 41,
+      "17": 47,
+      "18": 165,
+      "19": 47,
+      "20": 33,
+      "21": 47,
+      "22": 42,
+      "23": 198,
+      "24": 42,
+      "25": 66,
+      "26": 45,
+      "27": 42,
+      "28": 168,
+      "29": 42,
+      "30": 9,
+      "31": 28,
+      "32": 52,
+      "33": 24,
+      "34": 40,
+      "35": 46,
+      "36": 45,
+      "37": 9,
+      "38": 16,
+      "39": 21,
+      "40": 47,
+      "41": 42,
+      "42": 42,
+      "43": 9,
+      "44": 9,
+      "45": 9
+    },
+    "profile_seq_stats": {
+      "mean": 30.3,
+      "p50": 30,
+      "p95": 34,
+      "p99": 36,
+      "min": 26,
+      "max": 39
+    },
+    "npz_path": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\data\\tokenized\\rsg_tokenized.npz",
+    "npz_size_mb": 0.04,
+    "arrays": {
+      "profile_input_ids": [
+        1950,
+        128
+      ],
+      "profile_attention_mask": [
+        1950,
+        128
+      ],
+      "rsg_labels": [
+        1950
+      ]
+    }
+  },
+  "splits": {
+    "splits_found": false,
+    "status": "SKIP_NO_SPLITS_FILE",
+    "note": "Expected at C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\model\\unified_model\\data_splits.json. Run data_prep_r0.py to generate."
+  }
+}

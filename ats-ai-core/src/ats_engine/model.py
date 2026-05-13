@@ -5,7 +5,7 @@ Builds the Keras ATS scoring model.
 
 Architecture:
   - Input: two string tensors (resume_text, jd_text)
-  - Shared encoder: USE Lite (frozen by default)
+    - Shared encoder: MobileUSE v2 (frozen by default)
   - Similarity head: cosine similarity → dense → sigmoid → ats_score
   - Domain classifier head: dense → softmax (7 classes) → domain_logits
 
@@ -65,12 +65,12 @@ def build_ats_model(
 ) -> tf.keras.Model:
     """Build and compile the dual-head ATS Keras model.
 
-    The model shares a single USE Lite encoder for both resume and JD
+    The model shares a single MobileUSE encoder for both resume and JD
     inputs, then splits into a similarity head (score) and a domain
     classification head.
 
     Args:
-        hub_url: TF Hub URL for USE Lite.
+        hub_url: TF Hub URL for MobileUSE v2.
         frozen_encoder: If True, encoder weights are non-trainable.
 
     Returns:

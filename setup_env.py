@@ -140,7 +140,7 @@ TFLITE_DIR      = MODEL_DIR / "tflite"
 RUBRICS_DIR     = ROOT_DIR / "rubrics"
 
 # ── Encoder ──
-USE_LITE_URL    = "https://tfhub.dev/google/universal-sentence-encoder-lite/2"
+USE_LITE_URL    = "https://tfhub.dev/google/universal-sentence-encoder-mobile/2"
 EMBEDDING_DIM   = 512
 
 # ── Domain labels ──
@@ -157,10 +157,10 @@ NUM_DOMAINS = len(DOMAIN_LABELS)
 
 # ── Training ──
 BATCH_SIZE          = 32
-EPOCHS              = 50
+EPOCHS              = 60
 LEARNING_RATE       = 1e-4
-SCORE_LOSS_WEIGHT   = 0.7
-DOMAIN_LOSS_WEIGHT  = 0.3
+SCORE_LOSS_WEIGHT   = 0.35
+DOMAIN_LOSS_WEIGHT  = 0.35
 VALIDATION_SPLIT    = 0.15
 TEST_SPLIT          = 0.10
 RANDOM_SEED         = 42

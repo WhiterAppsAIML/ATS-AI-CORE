@@ -1,0 +1,15 @@
+{
+  "stage": "M-4",
+  "quantization_type": "Float16",
+  "tflite_file": "ats_core_mobileuse_float16.tflite",
+  "tflite_path": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\model\\ats_model\\ats_core_mobileuse_float16.tflite",
+  "file_size_mb": 491.6,
+  "size_gate": "N/A (Float16 fallback: 491.6 MB)",
+  "parity_samples": 100,
+  "parity_max_diff": 0.0,
+  "parity_mean_diff": 0.0,
+  "parity_pass_rate": 100.0,
+  "parity_gate": "PASS",
+  "select_tf_ops": true,
+  "ready_for_flutter": true
+}

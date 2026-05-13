@@ -13,6 +13,14 @@ data/synthetic/
 # Trained model weights
 model/ats_model/
 model/tflite/*.tflite
+*.h5
+*.pb
+*.zip
+*.tflite
+!flutter_deploy/assets/*.tflite
+saved_model*/
+saved_model/
+*.npz
 
 # Jupyter checkpoints
 .ipynb_checkpoints/

@@ -13,6 +13,7 @@ Usage:
 import json
 import logging
 import os
+import re
 from functools import lru_cache
 from pathlib import Path
 
@@ -84,6 +85,7 @@ def _empty_result(reason: str) -> dict:
         "missing_keywords": {"hard_skills": [], "soft_skills": [], "other": []},
         "feedback": [reason],
         "is_fresher": False,
+        "contact": {"name": "", "email": "", "phone": ""},
     }
 
 
@@ -159,6 +161,44 @@ def run_ats_inference(
         is_fresher=is_fresher,
     )
 
+    # ── Contact extraction ──────────────────────────────────────────────
+    def _extract_contact(text: str) -> dict:
+        """Extract name, email and phone from raw resume text."""
+        # Email — standard pattern
+        email_match = re.search(
+            r'[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}',
+            text
+        )
+        email = email_match.group(0) if email_match else ""
+
+        # Phone — handles formats: +91-9876543210, (98765) 43210,
+        #          9876543210, +1 (555) 123-4567
+        phone_match = re.search(
+            r'(\+?\d{1,3}[\s\-]?)?(\(?\d{3,5}\)?[\s\-]?)?\d{3,5}[\s\-]?\d{4,5}',
+            text
+        )
+        phone = phone_match.group(0).strip() if phone_match else ""
+
+        # Name — take the first non-empty line of the resume
+        # Most resumes start with the candidate's name on line 1
+        lines = [ln.strip() for ln in text.split('\n') if ln.strip()]
+        name = lines[0] if lines else ""
+        # If first line looks like a section header or email, try line 2
+        if name and (
+            '@' in name or
+            name.lower().startswith(('resume', 'curriculum', 'cv', 'profile'))
+        ):
+            name = lines[1] if len(lines) > 1 else ""
+
+        return {
+            "name":  name,
+            "email": email,
+            "phone": phone
+        }
+
+    contact_info = _extract_contact(resume_text)
+    # ── End contact extraction ───────────────────────────────────────────
+
     return {
         "ats_score": ats_score,
         "score_band": score_band,
@@ -167,6 +207,7 @@ def run_ats_inference(
         "missing_keywords": missing_keywords,
         "feedback": feedback,
         "is_fresher": is_fresher,
+        "contact": contact_info,
     }
 
 

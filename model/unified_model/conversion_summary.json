@@ -1,0 +1,79 @@
+{
+  "stage": "T-1",
+  "generated_at": "2026-05-03T10:21:10.828108Z",
+  "source_weights": "C:\\Users\\saini\\Desktop\\ats\\model\\unified_model\\r4_joint_best.weights.h5",
+  "source_stage": "R-4 Joint Fine-Tuning",
+  "source_metrics": {
+    "ats_mae_0_100": 4.73,
+    "r4_tight_gate": 4.73,
+    "domain_f1_macro": 0.8816,
+    "rsg_val_acc": 0.6897,
+    "best_val_mae": 4.8,
+    "early_stop_epoch": 22,
+    "total_epochs": 30
+  },
+  "architecture": {
+    "type": "heads-only (embedding inputs)",
+    "reason": "MobileUSE hub.KerasLayer uses FloorDiv/DynamicPartition/ParallelDynamicStitch ops incompatible with standard TFLite kernels. Encoder is kept separate per Flutter encoder handoff architecture dependency.",
+    "inputs": {
+      "resume_embedding": "float32[batch, 512]",
+      "jd_embedding": "float32[batch, 512]"
+    },
+    "outputs": {
+      "ats_score": "float32[batch, 1]  \u2014 sigmoid [0.0, 1.0]",
+      "domain_probs": "float32[batch, 7]  \u2014 softmax",
+      "rsg_template": "float32[batch, 46]  \u2014 softmax"
+    },
+    "heads": {
+      "ats": "Dense(256,relu) \u2192 Dropout(0.3) \u2192 Dense(64,relu) \u2192 Dropout(0.2) \u2192 Dense(1,sigmoid)",
+      "domain": "Dense(256,relu) \u2192 Dropout(0.3) \u2192 Dense(128,relu) \u2192 Dropout(0.2) \u2192 Dense(7,softmax)",
+      "rsg": "Dense(512,relu)+BN \u2192 Dropout(0.4) \u2192 Dense(256,relu)+BN \u2192 Dropout(0.3) \u2192 Dense(128,relu)+BN \u2192 Dropout(0.3) \u2192 Dense(46,softmax)"
+    }
+  },
+  "quantization": {
+    "type": "Float16",
+    "int8_skipped": true,
+    "int8_skip_reason": "Representative dataset calibration requires live MobileUSE encoder calls which are outside this heads-only graph boundary. Float16 quantization is sufficient: the heads-only model is already sub-5 MB and Float16 achieves the required parity within 2.0 pts.",
+    "optimizations": [
+      "DEFAULT"
+    ],
+    "supported_ops": [
+      "TFLITE_BUILTINS"
+    ]
+  },
+  "weight_transfer": {
+    "transferred_layers": 13,
+    "skipped_layers": 0,
+    "assert_zero_skipped": "PASS"
+  },
+  "parity_check_1": {
+    "description": "Keras full model (string input) vs Keras heads model (embedding input)",
+    "samples": 50,
+    "ats_mean_diff_pts": 0.0,
+    "ats_max_diff_pts": 0.0,
+    "threshold_pts": 0.01,
+    "result": "PASS"
+  },
+  "tflite_file": "unified_mobile_float16.tflite",
+  "tflite_path": "C:\\Users\\saini\\Desktop\\ats\\model\\unified_model\\unified_mobile_float16.tflite",
+  "file_size_mb": 1.765,
+  "size_gate_mb": 5.0,
+  "size_gate_pass": true,
+  "parity_check_2": {
+    "description": "Keras heads model vs TFLite interpreter",
+    "samples": 50,
+    "ats_mean_diff_pts": 0.0016,
+    "ats_max_diff_pts": 0.0024,
+    "dom_mean_diff": 6e-06,
+    "rsg_mean_diff": 9e-06,
+    "threshold_pts": 2.0,
+    "result": "PASS"
+  },
+  "definition_of_done": {
+    "tflite_binary_produced": true,
+    "size_under_5mb": true,
+    "parity2_under_2pts": true,
+    "conversion_summary_written": true
+  },
+  "ready_for_t2": true
+}

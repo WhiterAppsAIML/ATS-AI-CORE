@@ -1,0 +1,143 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "max_length": 128,
+  "ats": {
+    "n_total": 8936,
+    "score_min": 0.0,
+    "score_max": 0.953000009059906,
+    "domain_counts": {
+      "0": 1166,
+      "1": 2652,
+      "2": 636,
+      "3": 1064,
+      "4": 1567,
+      "5": 896,
+      "6": 955
+    },
+    "seq_stats": {
+      "resume": {
+        "mean": 127.68442256042972,
+        "p50": 128.0,
+        "p95": 128.0,
+        "p99": 128.0,
+        "max": 128.0,
+        "truncated_pct": 97.16875559534466
+      },
+      "jd": {
+        "mean": 127.48578782453,
+        "p50": 128.0,
+        "p95": 128.0,
+        "p99": 128.0,
+        "max": 128.0,
+        "truncated_pct": 98.56759176365264
+      }
+    }
+  },
+  "rsg": {
+    "n_total": 2748,
+    "source_file": "rsg_balanced.csv",
+    "label_range": [
+      0,
+      45
+    ],
+    "label_counts": {
+      "0": 50,
+      "1": 50,
+      "2": 50,
+      "3": 50,
+      "4": 50,
+      "5": 50,
+      "6": 52,
+      "7": 67,
+      "8": 50,
+      "9": 67,
+      "10": 50,
+      "11": 50,
+      "12": 50,
+      "13": 50,
+      "14": 50,
+      "15": 63,
+      "16": 50,
+      "17": 50,
+      "18": 165,
+      "19": 50,
+      "20": 50,
+      "21": 50,
+      "22": 50,
+      "23": 198,
+      "24": 50,
+      "25": 66,
+      "26": 50,
+      "27": 50,
+      "28": 168,
+      "29": 50,
+      "30": 50,
+      "31": 50,
+      "32": 52,
+      "33": 50,
+      "34": 50,
+      "35": 50,
+      "36": 50,
+      "37": 50,
+      "38": 50,
+      "39": 50,
+      "40": 50,
+      "41": 50,
+      "42": 50,
+      "43": 50,
+      "44": 50,
+      "45": 50
+    },
+    "seq_stats": {
+      "profile": {
+        "mean": 30.641921397379914,
+        "p50": 30.0,
+        "p95": 35.0,
+        "p99": 37.0,
+        "max": 43.0,
+        "truncated_pct": 0.0
+      }
+    }
+  },
+  "splits": {
+    "splits_json": "C:\\Users\\saini\\Desktop\\ats\\model\\unified_model\\data_splits.json",
+    "checks": {
+      "ats_train": {
+        "n": 6702,
+        "max_idx": 8935,
+        "dataset_size": 8936,
+        "oob_count": 0,
+        "ok": true
+      },
+      "ats_val": {
+        "n": 1340,
+        "max_idx": 8901,
+        "dataset_size": 8936,
+        "oob_count": 0,
+        "ok": true
+      },
+      "ats_test": {
+        "n": 894,
+        "max_idx": 8929,
+        "dataset_size": 8936,
+        "oob_count": 0,
+        "ok": true
+      },
+      "rsg_train": {
+        "n": 1560,
+        "max_idx": 1949,
+        "dataset_size": 2748,
+        "oob_count": 0,
+        "ok": true
+      },
+      "rsg_val": {
+        "n": 390,
+        "max_idx": 1948,
+        "dataset_size": 2748,
+        "oob_count": 0,
+        "ok": true
+      }
+    },
+    "all_indices_valid": true
+  }
+}

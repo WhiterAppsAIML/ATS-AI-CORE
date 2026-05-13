@@ -41,7 +41,7 @@ def main() -> None:
         input_shape=[],
         dtype=tf.string,
         trainable=False,
-        name="use_lite_encoder",
+        name="mobile_use_encoder",
     )
     embeddings = encoder(text_input)
     output = tf.keras.layers.Dense(1, name="dummy_output")(embeddings)

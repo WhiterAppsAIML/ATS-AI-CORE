@@ -1,0 +1,43 @@
+{
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "vocab_file": "vocab.txt",
+  "tokenizer_cls": "WordPiece",
+  "max_seq_len": 128,
+  "do_lower_case": true,
+  "pad_token": "[PAD]",
+  "unk_token": "[UNK]",
+  "cls_token": "[CLS]",
+  "sep_token": "[SEP]",
+  "inputs": [
+    "resume_input_ids",
+    "resume_attention_mask",
+    "jd_input_ids",
+    "jd_attention_mask"
+  ],
+  "outputs": {
+    "ats_score": {
+      "shape": [
+        1,
+        1
+      ],
+      "activation": "sigmoid",
+      "scale": 100
+    },
+    "domain_probs": {
+      "shape": [
+        1,
+        7
+      ],
+      "activation": "softmax",
+      "classes": 7
+    },
+    "rsg_template": {
+      "shape": [
+        1,
+        46
+      ],
+      "activation": "softmax",
+      "classes": 46
+    }
+  }
+}

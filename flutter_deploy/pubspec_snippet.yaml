@@ -1,0 +1,59 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# ATS AI — pubspec.yaml additions
+#
+# Copy each numbered section into the matching section of your existing
+# pubspec.yaml. Do NOT paste the whole file — only the marked additions.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+# ── 1. Minimum SDK ─────────────────────────────────────────────────────────────
+# Merge with your existing  environment:  block.
+# Dart ≥3.0 is required for record types used in AtsTokenizer.
+# Flutter ≥3.10 ships Dart 3 and compute() with the correct isolate semantics.
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+
+# ── 2. Dependency ──────────────────────────────────────────────────────────────
+# Add under your existing  dependencies:  block.
+# tflite_flutter is the only new package needed — the tokenizer is implemented
+# in pure Dart (no tflite_flutter_helper required).
+
+dependencies:
+  tflite_flutter: ^0.10.4
+
+
+# ── 3. Assets ──────────────────────────────────────────────────────────────────
+# Add under the  flutter:  section.
+# Copy the three files from flutter_deploy/assets/ into your project's assets/.
+
+flutter:
+  assets:
+    - assets/ats_unified_minilm_int8.tflite
+    - assets/vocab.txt
+    - assets/tokenizer_config.json
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ANDROID — android/app/build.gradle
+# ───────────────────────────────────────────────────────────────────────────────
+# Add the aaptOptions block inside the  android { }  block.
+# This prevents Gradle from compressing the .tflite file inside the APK.
+# TFLite requires the file to be uncompressed so it can memory-map it directly;
+# without this, the interpreter will throw "Failed to load model" at runtime.
+#
+#   android {
+#       ...
+#       aaptOptions {
+#           noCompress 'tflite'
+#       }
+#   }
+# ═══════════════════════════════════════════════════════════════════════════════
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# iOS — no extra configuration needed.
+# The .tflite file is bundled as a normal asset and loaded via rootBundle.
+# ═══════════════════════════════════════════════════════════════════════════════

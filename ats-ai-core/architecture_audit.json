@@ -1,0 +1,144 @@
+{
+  "use_layer_type": "hub.KerasLayer",
+  "use_input_type": "string",
+  "use_output_dim": 512,
+  "head1_layers": [
+    {
+      "name": "ats_dense1",
+      "type": "Dense",
+      "units": 256,
+      "activation": "relu",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    },
+    {
+      "name": "ats_drop1",
+      "type": "Dropout",
+      "rate": 0.3
+    },
+    {
+      "name": "ats_dense2",
+      "type": "Dense",
+      "units": 64,
+      "activation": "relu",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    },
+    {
+      "name": "ats_drop2",
+      "type": "Dropout",
+      "rate": 0.2
+    },
+    {
+      "name": "ats_score",
+      "type": "Dense",
+      "units": 1,
+      "activation": "sigmoid",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    }
+  ],
+  "head2_layers": [
+    {
+      "name": "dom_dense1",
+      "type": "Dense",
+      "units": 256,
+      "activation": "relu",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    },
+    {
+      "name": "dom_drop1",
+      "type": "Dropout",
+      "rate": 0.3
+    },
+    {
+      "name": "dom_dense2",
+      "type": "Dense",
+      "units": 128,
+      "activation": "relu",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    },
+    {
+      "name": "dom_drop2",
+      "type": "Dropout",
+      "rate": 0.2
+    },
+    {
+      "name": "domain_probs",
+      "type": "Dense",
+      "units": 7,
+      "activation": "softmax",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    }
+  ],
+  "head3_layers": [
+    {
+      "name": "rsg_dense1",
+      "type": "Dense",
+      "units": 512,
+      "activation": "relu",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    },
+    {
+      "name": "rsg_bn1",
+      "type": "BatchNormalization"
+    },
+    {
+      "name": "rsg_drop1",
+      "type": "Dropout",
+      "rate": 0.4
+    },
+    {
+      "name": "rsg_dense2",
+      "type": "Dense",
+      "units": 256,
+      "activation": "relu",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    },
+    {
+      "name": "rsg_bn2",
+      "type": "BatchNormalization"
+    },
+    {
+      "name": "rsg_drop2",
+      "type": "Dropout",
+      "rate": 0.3
+    },
+    {
+      "name": "rsg_dense3",
+      "type": "Dense",
+      "units": 128,
+      "activation": "relu",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    },
+    {
+      "name": "rsg_template",
+      "type": "Dense",
+      "units": 46,
+      "activation": "softmax",
+      "kernel_regularizer": null,
+      "bias_regularizer": null,
+      "activity_regularizer": null
+    }
+  ],
+  "int8_failure_reason": "Select TensorFlow op(s), included in the given model, is(are) not supported by this interpreter. Make sure you apply/link the Flex delegate before inference. For the Android, it can be resolved by adding \"org.tensorflow:tensorflow-lite-select-tf-ops\" dependency. See instructions: https://www.tensorflow.org/lite/guide/ops_selectNode number 0 (FlexStaticRegexReplace) failed to prepare.",
+  "float16_size_mb": 491.6,
+  "weights_h5_size_mb": 983.115,
+  "savedmodel_size_mb": 991.719,
+  "select_tf_ops_required": true
+}

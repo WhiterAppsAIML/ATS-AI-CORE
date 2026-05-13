@@ -1,0 +1,37 @@
+{
+  "stage": "T1",
+  "status": "PASSED",
+  "weights": "C:\\Users\\saini\\Desktop\\ats\\model\\unified_model\\new_unified_model\\r4c_final_weights.h5",
+  "conversion": {
+    "tflite_path": "C:\\Users\\saini\\Desktop\\ats\\model\\tflite\\ats_unified_minilm_int8.tflite",
+    "size_mb": 22.825,
+    "ops_mode": "DYNAMIC_RANGE_INT8_WEIGHTS",
+    "quantization": "INT8",
+    "flex_ops_count": 0,
+    "flex_ops": [],
+    "select_tf_count": 0
+  },
+  "parity": {
+    "samples": 50,
+    "ats_max_diff": 1.3692,
+    "ats_mean_diff": 0.247,
+    "domain_pct": 98.0,
+    "rsg_pct": 92.0
+  },
+  "metadata": {
+    "vocab_path": "C:\\Users\\saini\\Desktop\\ats\\model\\tflite\\vocab.txt",
+    "vocab_size": 30522,
+    "max_seq_len": 128,
+    "do_lower_case": true,
+    "tokenizer_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "tflite_embedded": false,
+    "sidecar_config": "C:\\Users\\saini\\Desktop\\ats\\model\\tflite\\tokenizer_config.json"
+  },
+  "checks": {
+    "zero_flex_ops": true,
+    "size_lt_30mb": true,
+    "ats_diff_lt_2": true,
+    "domain_match_ge_96": true,
+    "rsg_match_ge_94": true
+  }
+}

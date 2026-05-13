@@ -1,0 +1,117 @@
+{
+  "stage": "R4c",
+  "all_gates_pass": false,
+  "hard_stop": false,
+  "phase1": {
+    "best_dom_f1": 0.8369
+  },
+  "phase2": {
+    "best_dom_f1": 0.8358,
+    "best_epoch": 9
+  },
+  "gates": {
+    "ats_val_mae_100": {
+      "value": 6.2803,
+      "threshold": "< 6.5",
+      "pass": true
+    },
+    "ats_test_mae_100": {
+      "value": 6.3183,
+      "threshold": "< 7.0",
+      "pass": true
+    },
+    "domain_f1_macro": {
+      "value": 0.8251,
+      "threshold": "> 0.85",
+      "pass": false
+    },
+    "domain_all_cls_pass": false,
+    "rsg_val_top1": {
+      "value": 0.7872,
+      "threshold": "> 0.65",
+      "pass": true
+    },
+    "rsg_val_top3": 0.9795,
+    "fresher_gap": -10.069416046142578,
+    "fresher_pass": true
+  },
+  "per_domain_f1": {
+    "IT": {
+      "f1": 0.7692,
+      "pass": false,
+      "delta_from_r4b": -0.0276
+    },
+    "Non-IT": {
+      "f1": 0.759,
+      "pass": false,
+      "delta_from_r4b": -0.0469
+    },
+    "Design": {
+      "f1": 0.918,
+      "pass": true,
+      "delta_from_r4b": -0.0026
+    },
+    "Healthcare": {
+      "f1": 0.8073,
+      "pass": true,
+      "delta_from_r4b": -0.0433
+    },
+    "Finance": {
+      "f1": 0.7751,
+      "pass": false,
+      "delta_from_r4b": -0.0111
+    },
+    "Legal": {
+      "f1": 0.9198,
+      "pass": true,
+      "delta_from_r4b": 0.0374
+    },
+    "Edu": {
+      "f1": 0.8272,
+      "pass": true,
+      "delta_from_r4b": 0.0118
+    }
+  },
+  "baseline_r4b": {
+    "val_mae": 6.3513,
+    "dom_f1": 0.8369,
+    "rsg_acc": 0.7846
+  },
+  "training_config": {
+    "it_upsample": 2,
+    "phase1": {
+      "lr": 5e-05,
+      "max_epochs": 0,
+      "patience": 8,
+      "dom_weights": {
+        "0": 2.0,
+        "1": 0.8,
+        "2": 0.3,
+        "3": 0.7,
+        "4": 2.5,
+        "5": 0.25,
+        "6": 0.5
+      }
+    },
+    "phase2": {
+      "lr": 3e-06,
+      "max_epochs": 40,
+      "patience": 12,
+      "loss_weights": {
+        "ats": 0.35,
+        "dom": 0.35,
+        "rsg": 0.3
+      },
+      "dom_weights": {
+        "0": 2.5,
+        "1": 0.8,
+        "2": 0.3,
+        "3": 0.7,
+        "4": 3.0,
+        "5": 0.25,
+        "6": 0.5
+      },
+      "grad_clip": 1.0
+    }
+  }
+}

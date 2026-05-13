@@ -1,0 +1,55 @@
+{
+  "model_summary": {
+    "name": "unified_ats_minilm",
+    "trainable_params": 715318,
+    "non_trainable_params": 22715008,
+    "total_params": 23430326
+  },
+  "conversion": {
+    "tflite_path": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\model\\unified_model\\unified_minilm_int8.tflite",
+    "size_mb": 34.278,
+    "flex_ops": [],
+    "flex_pass": true,
+    "output_shapes": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        46
+      ]
+    ],
+    "shapes_pass": true
+  },
+  "op_inventory": [
+    "ADD",
+    "BATCH_MATMUL",
+    "CAST",
+    "CONCATENATION",
+    "DELEGATE",
+    "DEQUANTIZE",
+    "DIV",
+    "FULLY_CONNECTED",
+    "GATHER",
+    "GELU",
+    "L2_NORMALIZATION",
+    "LOGISTIC",
+    "MAXIMUM",
+    "MEAN",
+    "MUL",
+    "QUANTIZE",
+    "RESHAPE",
+    "RSQRT",
+    "SOFTMAX",
+    "SQUARED_DIFFERENCE",
+    "SUB",
+    "SUM",
+    "TRANSPOSE"
+  ],
+  "validation_passed": true
+}

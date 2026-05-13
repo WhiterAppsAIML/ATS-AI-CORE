@@ -1,0 +1,49 @@
+{
+  "stage": "T2",
+  "status": "PASSED",
+  "model": "C:\\Users\\saini\\Desktop\\ats\\model\\tflite\\ats_unified_minilm_int8.tflite",
+  "test_vectors": {
+    "count": 20,
+    "domains_covered": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domain_counts": {
+      "IT / Software": 3,
+      "Non-IT / Management": 3,
+      "Design / Creative": 3,
+      "Healthcare": 3,
+      "Finance / Banking": 2,
+      "Legal": 3,
+      "Education": 3
+    },
+    "fresher_count": 4
+  },
+  "latency": {
+    "device": "CPU",
+    "runs": 100,
+    "mean_ms": 21.94,
+    "p50_ms": 21.88,
+    "p95_ms": 23.57,
+    "p99_ms": 24.38,
+    "min_ms": 20.5,
+    "max_ms": 25.59,
+    "limit_ms": 500.0,
+    "passed": true
+  },
+  "outputs": {
+    "test_vectors_path": "C:\\Users\\saini\\Desktop\\ats\\evaluation\\t2_test_vectors.json",
+    "report_path": "C:\\Users\\saini\\Desktop\\ats\\evaluation\\t2_integration_report.json",
+    "io_schema_path": "C:\\Users\\saini\\Desktop\\ats\\model\\tflite\\IO_SCHEMA.md"
+  },
+  "checks": {
+    "all_domains_covered": true,
+    "freshers_gte_4": true,
+    "latency_pass": true
+  }
+}

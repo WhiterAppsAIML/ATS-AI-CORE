@@ -1,0 +1,21 @@
+Loading tokenized data ...
+  ATS  train=6,702  val=1,340
+  RSG  train=1,560  val=390
+Loading MiniLM encoder (sentence-transformers/all-MiniLM-L6-v2) ...
+  Trainable params: 715,318  |  Frozen: 22,715,008
+
+Starting training: max_epochs=40  batch=32  lr=0.001
+  ATS batches/epoch: 210  RSG batches/epoch: 49
+
+Epoch   1/40  train=1.1866  val=0.9439  ATS_MAE=7.61  Dom_F1=0.7817  RSG_Acc=0.3359
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFBertModel: ['embeddings.position_ids']
+- This IS expected if you are initializing TFBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFBertModel for predictions without further training.
+  Trainable params: 715,318  |  Frozen: 22,715,008
+
+Starting training: max_epochs=40  batch=32  lr=0.001
+  ATS batches/epoch: 210  RSG batches/epoch: 49
+

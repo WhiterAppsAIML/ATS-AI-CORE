@@ -5,7 +5,13 @@ All hyperparameters, file paths, and domain constants live here.
 Never hardcode these values in model, trainer, or inference files.
 """
 
+import os
 from pathlib import Path
+
+
+def _env_path(name: str, default: Path) -> Path:
+    value = os.environ.get(name)
+    return Path(value) if value else default
 
 # ── Root paths ──────────────────────────────────────────────────────────────
 ROOT_DIR: Path = Path(__file__).parent.parent.resolve()
@@ -19,6 +25,7 @@ SYNTHETIC_DIR: Path = DATA_DIR / "synthetic"
 MODEL_DIR: Path = ROOT_DIR / "model"
 ATS_MODEL_DIR: Path = MODEL_DIR / "ats_model"
 TFLITE_DIR: Path = MODEL_DIR / "tflite"
+UNIFIED_MODEL_DIR: Path = MODEL_DIR / "unified_model"
 RUBRICS_DIR: Path = ROOT_DIR / "rubrics"
 EVALUATION_DIR: Path = ROOT_DIR / "evaluation"
 
@@ -41,10 +48,28 @@ KEYWORD_CATEGORIES_JSON: Path = RUBRICS_DIR / "keyword_categories.json"
 TFLITE_OUTPUT_PATH: Path = TFLITE_DIR / "ats_core.tflite"
 
 # ── Encoder ──────────────────────────────────────────────────────────────────
-# USE v4 (full) accepts raw strings directly — no SentencePiece needed.
-# USE Lite v2 would require SentencePiece tokenization which is not implemented.
-USE_LITE_URL: str = "https://tfhub.dev/google/universal-sentence-encoder/4"
+# MobileUSE v2 accepts raw strings directly — no SentencePiece needed.
+USE_LITE_URL: str = r"C:\Users\saini\Desktop\ats\ats-ai-core\tfhub_cache\063d866c06683311b44b4992fd46003be952409c"
 EMBEDDING_DIM: int = 512
+RSG_NUM_CLASSES: int = 46
+
+# MiniLM-L6-v2 encoder (replaces USE in E1+)
+MINILM_MODEL_NAME: str = "sentence-transformers/all-MiniLM-L6-v2"
+MINILM_EMBEDDING_DIM: int = 384
+MINILM_MAX_SEQ_LEN: int = 128
+
+# ── RSG paths (override via environment variables if needed) ──────────────
+RSG_CSV_PATH: Path = _env_path("RSG_CSV_PATH", LABELED_DIR / "rsg_data.csv")
+RSG_BALANCED_CSV_PATH: Path = _env_path(
+    "RSG_BALANCED_CSV_PATH", LABELED_DIR / "rsg_balanced.csv"
+)
+RSG_MAPPING_JSON: Path = _env_path(
+    "RSG_MAPPING_JSON", UNIFIED_MODEL_DIR / "rsg_label_mapping.json"
+)
+RSG_KERAS_PATH: Path = _env_path(
+    "RSG_KERAS_PATH",
+    PROJECT_DIR / "rsg" / "RSG-AI-MODULE-main" / "model" / "summary_model.keras",
+)
 
 # ── Domain index mapping ─────────────────────────────────────────────────────
 DOMAIN_LABELS: dict[int, str] = {
@@ -99,8 +124,9 @@ LIVECARER_CATEGORY_MAP: dict[str, int] = {
 BATCH_SIZE: int = 32
 EPOCHS: int = 60
 LEARNING_RATE: float = 1e-4
-SCORE_LOSS_WEIGHT: float = 0.35      # Increased — prevents MAE regression
-DOMAIN_LOSS_WEIGHT: float = 0.65     # Reduced slightly — was over-rotating on domain
+SCORE_LOSS_WEIGHT: float = 0.35
+DOMAIN_LOSS_WEIGHT: float = 0.35
+RSG_LOSS_WEIGHT: float = 0.30
 DOMAIN_CLASS_WEIGHTS: dict[int, float] = {
     0: 1.4,   # IT — needs more gradient signal
     1: 0.8,   # Non-IT — well represented, reduce weight
@@ -120,7 +146,7 @@ MAX_TEXT_LENGTH: int = 512  # token cap for encoder
 # ── Target metrics (pass/fail gates) ─────────────────────────────────────────
 TARGET_MAE: float = 8.0          # on 0–100 scale
 TARGET_DOMAIN_F1: float = 0.85
-MAX_MODEL_SIZE_MB: float = 600.0
+MAX_MODEL_SIZE_MB: float = 30.0
 TFLITE_PARITY_TOLERANCE: float = 0.02   # on 0.0–1.0 scale
 
 # ── Score bands ───────────────────────────────────────────────────────────────

@@ -33,6 +33,12 @@ Welcome! This index helps you navigate all the guides for running the ATS Keras 
    - **Created By**: Development team
    - **Use When**: You need technical deep dive or model details
 
+### 4. **WORKING_WITH_BEST_UNIFIED_WEIGHTS.md** 🧩 UNIFIED MODEL HANDOFF
+   - **Best For**: Sharing and running the 1GB unified model weights with a teammate
+   - **Content**: Exact files to share, load sequence, quick run commands, common issues
+   - **Time to Read**: 5-7 minutes
+   - **Use When**: You need to work directly with `best_unified_weights.h5`
+
 ---
 
 ## 💻 Code Examples & Scripts
@@ -59,6 +65,15 @@ Welcome! This index helps you navigate all the guides for running the ATS Keras 
      ```
    - **Supports**: PDF and TXT formats
    - **Official**: Part of project codebase
+
+### 3. **tools/work_with_best_unified_weights.py** 🧪 UNIFIED WEIGHTS RUNNER
+    - **Purpose**: Load `best_unified_weights.h5` with correct unified architecture and run inference
+    - **How to Use**:
+       ```bash
+       python tools/work_with_best_unified_weights.py --pretty
+       ```
+    - **Outputs**: ATS score, domain prediction, RSG template prediction
+    - **Use With**: `WORKING_WITH_BEST_UNIFIED_WEIGHTS.md`
 
 ---
 

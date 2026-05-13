@@ -1,0 +1,24 @@
+{
+  "stage": "B-4",
+  "source_weights": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\model\\ats_model\\unified_model_B3c_augmented.h5",
+  "architecture": "heads-only (embedding inputs)",
+  "quantization_type": "Float16",
+  "tflite_file": "unified_model_lite_v2_float16.tflite",
+  "tflite_path": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\model\\unified_model\\unified_model_lite_v2_float16.tflite",
+  "file_size_mb": 1.8,
+  "size_gate_pass": true,
+  "parity_samples": 50,
+  "parity_mean_diff": 0.0006,
+  "parity_max_diff": 0.0026,
+  "parity_pass": true,
+  "ready_for_flutter": true,
+  "input_spec": {
+    "resume_embedding": "float32[batch, 512]",
+    "jd_embedding": "float32[batch, 512]"
+  },
+  "output_spec": {
+    "ats_score": "float32[batch, 1] -- sigmoid",
+    "domain_probs": "float32[batch, 7] -- softmax",
+    "rsg_template": "float32[batch, 46] -- softmax"
+  }
+}

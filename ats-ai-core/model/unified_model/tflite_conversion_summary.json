@@ -1,0 +1,10 @@
+{
+  "quantization_type": "Float16",
+  "tflite_file": "unified_float16.tflite",
+  "tflite_path": "C:\\Users\\saini\\Desktop\\ats\\ats-ai-core\\model\\unified_model\\unified_float16.tflite",
+  "file_size_mb": 491.6,
+  "parity_mean_diff": 0.0,
+  "parity_max_diff": 0.0,
+  "parity_pass": true,
+  "ready_for_flutter": true
+}
